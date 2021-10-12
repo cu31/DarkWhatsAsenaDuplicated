@@ -1,9 +1,9 @@
 {
-    "name": "Meenakshi",
-    "description": "Meenakshi project - Makes it easy and fun to use Whatsapp. World’s first UserBot made for WhatsApp.",
-    "logo": "https://i.hizliresim.com/m13agyp.jpg",
+    "name": "Dark Bot",
+    "description": "Dark - project - Makes it easy and fun to use Whatsapp. World’s first UserBot made for WhatsApp.",
+    "logo": "https://github.com/cu31/media-gif/blob/main/29c97db6b7086963c65508b8be80cbe5.png?raw=true",
     "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai"],
-    "repository": "https://github.com/vishnu-kayamkulam/Meenakshi",
+    "repository": "https://github.com/cu31/DarkWhatsAsenaDuplicated",
     "website":   "https://t.me/phaticusthiccy",
     "success_url": "https://t.me/AsenaSupport",
     "stack": "container",
