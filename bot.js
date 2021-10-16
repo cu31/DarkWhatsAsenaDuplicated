@@ -1,8 +1,6 @@
 /* Copyright (C) 2020 Yusuf Usta.
-
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
 WhatsAsena - Yusuf Usta
 */
 
@@ -85,7 +83,7 @@ async function whatsAsena () {
 
     conn.on ('credentials-updated', async () => {
         console.log(
-            chalk.blueBright.italic('✅ Giriş Bilgileri Güncellendi!')
+            chalk.blueBright.italic('✅ Login information updated!')
         );
 
         const authInfo = conn.base64EncodedAuthInfo();
@@ -99,18 +97,17 @@ async function whatsAsena () {
     conn.on('connecting', async () => {
         console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
-
-${chalk.blue.italic('ℹ️ WhatsApp A Bağlanılıyor...Lütfen Bekleyiniz.')}`);
+${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
     });
     
 
     conn.on('open', async () => {
         console.log(
-            chalk.green.bold('✅ Giriş Başarılı')
+            chalk.green.bold('✅ Login successful!')
         );
 
         console.log(
-            chalk.blueBright.italic('⬇️ Harici Pluginler Yükleniyor...')
+            chalk.blueBright.italic('⬇️ Installing external plugins...')
         );
 
         var plugins = await plugindb.PluginDB.findAll();
@@ -126,7 +123,7 @@ ${chalk.blue.italic('ℹ️ WhatsApp A Bağlanılıyor...Lütfen Bekleyiniz.')}`
         });
 
         console.log(
-            chalk.blueBright.italic('⬇️ Internatial Pluginler Yükleniyor...')
+            chalk.blueBright.italic('⬇️ Installing plugins...')
         );
 
         fs.readdirSync('./plugins').forEach(plugin => {
@@ -136,7 +133,7 @@ ${chalk.blue.italic('ℹ️ WhatsApp A Bağlanılıyor...Lütfen Bekleyiniz.')}`
         });
 
         console.log(
-            chalk.green.bold('Dark Bot Çalışıyor!')
+            chalk.green.bold('dark working!')
         );
     });
     
@@ -232,7 +229,7 @@ ${chalk.blue.italic('ℹ️ WhatsApp A Bağlanılıyor...Lütfen Bekleyiniz.')}`
                             await command.function(whats, match);
                         } catch (error) {
                             if (config.LANG == 'TR' || config.LANG == 'AZ') {
-                                await conn.sendMessage(conn.user.jid, '-- *HATA RAPORU [WHATSASENA]* --' + 
+                                await conn.sendMessage(conn.user.jid, '-- HATA RAPORU [WHATSASENA] --' + 
                                     '\n*WhatsAsena bir hata gerçekleşti!*'+
                                     '\n_Bu hata logunda numaranız veya karşı bir tarafın numarası olabilir. Lütfen buna dikkat edin!_' +
                                     '\n_Yardım için Telegram grubumuza yazabilirsiniz._' +
@@ -240,8 +237,8 @@ ${chalk.blue.italic('ℹ️ WhatsApp A Bağlanılıyor...Lütfen Bekleyiniz.')}`
                                     'Gerçekleşen Hata: ' + error + '\n\n'
                                     , MessageType.text);
                             } else {
-                                await conn.sendMessage(conn.user.jid, '*~______~*Dark*~____~*' +
-                                    '\n\n* ' + error + '*\n'
+                                await conn.sendMessage(conn.user.jid, '*~______~ dark ~____~*' +
+                                    '\n\n*🧞‍♂️ ' + error + '*\n'
                                     , MessageType.text);
                             }
                         }
