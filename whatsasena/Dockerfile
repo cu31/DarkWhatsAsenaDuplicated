@@ -1,6 +1,6 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/cu31/DarkWhatsAsenaDuplicated /root/WhatsAsenaDuplicated
+RUN git clone https://github.com/cu31/DarkWhatsAsenaDuplicated/blob/SEP-boT /root/WhatsAsenaDuplicated
 
 WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
